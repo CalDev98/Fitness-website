@@ -1,0 +1,696 @@
+/* =================================================================================================
+*************************This website has been built by C@LDEV**************************************
+===================================================================================================*/
+
+@font-face {
+    font-family: Poppins;
+    src: url(./Font/Poppins-Black.ttf);
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration:  none;
+}
+
+li {
+     list-style: none;
+}
+
+/* Header section */
+
+.navbar {
+    position: relative;
+    width: 100%;
+    height: 12vh;
+    z-index: 5;
+    background: linear-gradient(90deg, rgba(221,213,40,1) 36%, rgba(242,236,7,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5rem;
+}
+
+.logo-container {
+    width: 10%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 7px;
+    margin: 0rem 8rem;
+}
+
+.logo-container:hover {
+    cursor: pointer;
+}
+
+.logo-container h1 span svg{
+    position: relative;
+    margin: 3px;
+}
+
+.logo-container h1 {
+    position: absolute;
+    padding: 2px;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 7px;
+    color: rgb(44, 44, 44);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container h1 span:hover {
+    transform: translateY(-4px);
+    transition: .5s ease;
+    opacity: 0.8;
+}
+
+nav {
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 8rem;
+}
+
+.nav-links {
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: rgb(44, 44, 44);
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.nav-links li a:hover {
+    background-color:  rgb(44, 44, 44);
+    color: rgba(221,213,40,1);
+}
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+}
+
+.hero-img {
+    height: 100vh;
+    opacity: 0.8;
+}
+
+.slide {
+    background: radial-gradient(rgba(204, 204, 204, 0.555), rgba(142, 86, 214, 0.534));
+}
+
+#carouselExampleIndicators{
+    z-index: -1;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+}
+
+.hero-brand {
+    font-size: 4rem;
+    color: rgba(221,213,40,1);
+    text-transform: uppercase;
+}
+
+.hero-text {
+    position: absolute;
+    color: #ffff;
+    width: 50%;
+    text-align: center;
+    min-height: 30vh;
+    margin: 5rem 20rem;
+    /* transform: translate(50%, 20%); */
+    background: transparent;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-text .hero-btn {
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 1.3rem;
+    border: 3px solid rgb(221,213,40);
+    background-color: transparent;
+    background: linear-gradient(90deg, rgba(221,213,40,1) 36%, rgba(242,236,7,1) 100%);
+}
+.hero-text .hero-btn, .our-programs a:hover {
+    background: rgb(221,213,40);
+    border: 3px solid rgb(221,213,40);
+    color: rgb(44, 44, 44);
+}
+
+/* our programs */
+.our-programs {
+    min-height: 70vh;
+    padding: 3rem;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    flex-direction: column;
+}
+
+.our-programs a {
+    font-size: 1.3rem;
+    padding: 1rem 4rem;
+    color: white;
+    text-align: center;
+    margin: 1rem;
+    background: rgb(221,213,40);
+    border: 3px solid rgb(221,213,40);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cards-container .card {
+    width: 20rem;
+    height: 23rem;
+    margin: 1rem;
+}
+
+.cards-container .card img {
+    filter: opacity(0.8);
+}
+
+.card-img-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.card-img-overlay h5 {
+    font-size: 2rem;
+}
+
+.our-programs h1 {
+    text-align: center;
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+/* Call to action */
+.start {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    flex-direction: column;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 36%, rgba(0, 0, 0, 0.3) 50%), url(./img/bg-apply.jpg);
+    background-position: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+.start a {
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(221,213,40);
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem;
+    transition: 0.3s linear;
+}
+
+.start a:hover {
+    background: rgb(221,213,40);
+    border: 3px solid rgb(221,213,40);
+    color: rgb(44, 44, 44);
+}
+
+/* our coaches section */
+.coaches-container {
+    min-height: 60vh;
+    padding: 3rem;
+    background: rgb(221,213,40);
+    background: linear-gradient(90deg, rgba(221,213,40,1) 36%, rgba(242,236,7,1) 100%);
+    /* background-color: rgb(44, 44, 44); */
+}
+
+.coaches {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.coaches-container h1 {
+    text-align: center;
+    padding: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.coaches .coach-card {
+    width: 40%;
+    min-height: 15rem;
+    margin: 3rem;
+    background-color: rgb(44, 44, 44);
+    border-radius: 3px;
+    padding: 2rem 0rem 1rem;
+}
+
+.coach-information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.coach-information img{
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    border: 5px solid rgb(221,213,40);
+    border-radius: 5rem;
+    top: -5rem;
+    left: -3rem;
+}
+
+.coach-card-body {
+    width: 80%;
+    text-align: right;
+    color: rgb(161, 161, 161);
+    padding: 10px;
+    position: relative;
+    left: 3rem;
+}
+
+.coach-card-body h2 {
+    color: rgba(221,213,40,1);
+    font-size: 1.5rem;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.coach-card-body h6 {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+/* Testimonials Sections */
+.testimonials-container {
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+    padding: 3rem 5rem;
+}
+
+.testimonials-inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonials-inner-container h1 {
+    text-align: center;
+    color: rgb(221,213,40);
+    /* text-transform: uppercase; */
+}
+
+.testimonials-inner-container p {
+    font-size: 2rem;
+    color: rgb(44, 44, 44);
+}
+
+.testimonials-inner-container .testimonial-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 7rem 0rem 3rem;
+}
+
+.testimonials-profiles {
+    width: 35%;
+    min-height: 20rem;
+    padding: 6rem 2rem 2rem;
+    background-color: rgba(204, 204, 204, 0.555);
+    position: relative;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+.testimonials-profiles:hover {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials-profiles img {
+    position: absolute;
+    top: -5rem;
+    left: 6rem;
+    border: 10px solid rgb(255, 255, 255);
+}
+
+.user-pic {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.testimonial h3 {
+    font-size: 1.1rem;
+    color: rgb(221,213,40);
+}
+
+.testimonial span {
+    font-size: 15px;
+    color: #333;
+}
+
+blockquote .fa{
+    font-size: 15px;
+    line-height: 30px;
+}
+
+
+
+/* Contact Form Section */
+.contact-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+}
+
+.contact-card {
+    width: 40%;
+    min-height: 20rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(221,213,40);
+    background:  linear-gradient(90deg, rgba(221,213,40,1) 36%, rgba(242,236,7,1) 100%);
+    margin: 3rem;
+    position: absolute;
+    right: 32rem;
+    z-index: 1;
+    border: 10px solid rgb(255, 255, 255);
+}
+
+.contact-info {
+    background-color: rgb(44, 44, 44);
+    width: 60%;
+    min-height: 100vh;
+    position: absolute;
+    right: -7rem;
+    transform: skewX(-10deg);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-info h3 {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-bottom: 0.5rem;
+    margin: 2rem;
+}
+
+label {
+    margin: 1rem 0rem;
+    font-size: 1rem;
+    color: rgb(44, 44, 44);
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 20rem;
+    height: 1rem;
+    padding: 1rem;
+    margin: 2rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.755);
+}
+textarea {
+    height: 4rem;
+}
+
+.btn-container button {
+    border: 3px solid rgb(44, 44, 44);
+    margin: 1rem 0rem;
+    text-transform: uppercase;
+}
+
+.btn-container button:hover {
+    border: 3px solid rgb(44, 44, 44);
+    background: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
+}
+
+/* pricing section */
+.pricing-container {
+    min-height: 70vh;
+    padding: 3rem;
+    background-color: rgb(95, 95, 95);
+}
+
+.pricing-container h1 {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+.pricing-container h1 span {
+    color: rgba(242,236,7,1);
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.pricing-cards .card {
+    height: 25rem;
+    width: 20rem;
+    margin: 1rem;
+    text-align: center;
+    border: none;
+}
+
+.card .card-header {
+    background-color: white;
+}
+
+.special-header {
+    color: rgb(221,213,40);
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-direction: column;
+    background-color: rgb(44, 44, 44);
+}
+
+.special-body {
+    background-color: rgb(221,213,40);
+}
+
+.special-btn {
+    background: transparent;
+    border: 3px solid rgb(255, 255, 255);
+    color: rgb(44, 44, 44);
+}
+
+.card-btn {
+    padding: 1rem 0rem;
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pricing-btn {
+    background: transparent;
+    border: 3px solid rgb(221,213,40);
+    color: rgb(255, 255, 255);
+}
+
+.card-btn:hover {
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    border-color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+}
+
+.featured-list {
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}  
+
+/* Share buttons */
+.share-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-btn {
+    position: absolute;
+    height: 6rem;
+    background-color: #FFFFFF;
+    width: 70%;
+    z-index: 3;
+}
+
+.share-btn ul {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.share-btn ul li a{
+    color: rgb(44, 44, 44);
+    text-decoration: none;
+    /* font-weight: bold; */
+    font-size: 3rem;
+}
+
+.share-btn ul li a i:hover {
+    transform: translateY(-6px);
+    transition: .5s ease;
+}
+
+
+/* Footer Section */
+.footer-container {
+    min-height: 50vh;
+}
+
+.footer {
+    width: 100%;
+    padding: 5rem;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer-list li {
+    color: rgba(204, 204, 204, 0.555);
+    margin: 0.5rem;
+}
+
+.footer-list li a {
+    color: rgba(204, 204, 204, 0.555);
+}
+
+.footer div h2, .newsletter h2, .newsletter p {
+    font-weight: light;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.footer-list li span {
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
+
+.newsletter input {
+    width: 20rem;
+    height: 2rem;
+    padding: 1rem;
+    border: none;
+    background-color: rgb(95, 95, 95);
+    color: rgb(255, 255, 255);
+}
+
+.newsletter input::placeholder {
+    color: rgb(255, 255, 255)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+}
+
+.newsletter button {
+    background: transparent;
+    border: 3px solid rgb(221,213,40);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+} 
+.newsletter button:hover {
+    color: rgb(44, 44, 44);
+    border-color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+}
+
+
+.copyright {
+    padding: 2rem;
+    min-height: 5vh;
+    background-color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(44, 44, 44);
+    font-weight: bold;
+}
+
+
+/* For Mobile or Tablet Section */
+
+
+/* End of Responsive Section */
