@@ -1,0 +1,17 @@
+@media screen and (max-width: 1258px) {
+    /* .navbar {
+        padding: 2rem;
+        display: flex;
+    }
+
+    nav {
+        width: 45%;
+    } */
+
+    .coaches {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}

@@ -19,6 +19,10 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    min-width: 100%;
+}
+
 a {
     text-decoration: none;
 }
@@ -33,26 +37,25 @@ li {
 /* Header section */
 
 .navbar {
-    position: relative;
-    width: 100%;
-    height: 12vh;
-    z-index: 5;
-    background: linear-gradient(90deg, rgba(221,213,40,1) 36%, rgba(242,236,7,1) 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 5rem;
+    width: 100vw;
+    height: 15vh;
+    z-index: 15;
+    /* background: linear-gradient(50deg, rgba(221,213,40,0.9) 36%, rgba(242,236,7,0.9) 100%); */
+    position: fixed;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(221,213,40,0.3);
 }
 
 .logo-container {
-    width: 10%;
-    height: 8vh;
+    width: 8.5rem;
+    height: 9vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(44, 44, 44);
-    border-radius: 7px;
-    margin: 0rem 8rem;
+    border: 2px solid rgba(242,236,7,1);
+    border-radius: 100px;
+    margin: 0rem 2rem;
 }
 
 .logo-container:hover {
@@ -67,9 +70,9 @@ li {
 .logo-container h1 {
     position: absolute;
     padding: 2px;
-    border: 1px solid rgb(44, 44, 44);
-    border-radius: 7px;
-    color: rgb(44, 44, 44);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -88,36 +91,55 @@ li {
 
 nav {
     width: 50%;
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0rem 8rem;
+    height: 10vh;
+    margin-right: 2rem;
 }
 
 .nav-links {
-    height: 5vh;
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	height: 100%;
+	justify-content: space-around;
     align-items: center;
+	/* margin-left: auto; */
 }
 
 .nav-links li a {
-    color: rgb(44, 44, 44);
-    text-decoration: none;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+    font-size: 18px;
     padding: 1rem;
-    border-radius: 10px;
-    transition: .5s ease;
+    text-transform: uppercase;
 }
 
 .nav-links li a:hover {
-    background-color:  rgb(44, 44, 44);
-    color: rgba(221,213,40,1);
+	background-color: rgba(221,213,40,1);
+    border-radius: 100px;
+    color: rgb(44, 44, 44);
 }
+
+.signUp {
+    margin: 0rem 3rem;
+}
+
+.signUp button {
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 100px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    background: rgba(221,213,40,1);
+    transition: 0.5s all linear;
+    outline: none;
+}
+
+.signUp button:hover {
+    background: rgb(255, 245, 51);
+    color: rgb(44, 44, 44);
+}
+
 
 /* Hero Section */
 
@@ -127,7 +149,7 @@ nav {
 
 .hero-img {
     height: 100vh;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .slide {
@@ -155,8 +177,8 @@ nav {
     width: 50%;
     text-align: center;
     min-height: 30vh;
-    margin: 5rem 20rem;
-    /* transform: translate(50%, 20%); */
+    left: 20rem;
+    top: 10rem;
     background: transparent;
     z-index: 1;
     display: flex;
@@ -173,7 +195,9 @@ nav {
     border: none;
     font-size: 1.3rem;
     border: 3px solid rgb(221,213,40);
+    border-radius: 100px;
     background-color: transparent;
+    text-transform: uppercase;
     background: linear-gradient(90deg, rgba(221,213,40,1) 36%, rgba(242,236,7,1) 100%);
 }
 .hero-text .hero-btn, .our-programs a:hover {
@@ -190,7 +214,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
     flex-direction: column;
 }
 
@@ -199,16 +222,18 @@ nav {
     padding: 1rem 4rem;
     color: white;
     text-align: center;
-    margin: 1rem;
+    margin-top: 3rem;
     background: rgb(221,213,40);
     border: 3px solid rgb(221,213,40);
+    border-radius: 100px;
+    text-transform: uppercase;
 }
 
-.cards-container {
+.our-programs .cards-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .cards-container .card {
@@ -245,7 +270,7 @@ nav {
     align-items: center;
     padding: 3rem;
     flex-direction: column;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 36%, rgba(0, 0, 0, 0.3) 50%), url(./img/bg-apply.jpg);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 36%, rgba(0, 0, 0, 0.3) 50%), url(../img/bg-apply.jpg);
     background-position: cover;
     background-position: center;
     color: rgb(255, 255, 255);
@@ -254,8 +279,9 @@ nav {
 .start a {
     color: rgb(255, 255, 255);
     border: 3px solid rgb(221,213,40);
+    border-radius: 100px;
     font-size: 1.2rem;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     margin: 1rem;
     transition: 0.3s linear;
 }
@@ -269,17 +295,18 @@ nav {
 /* our coaches section */
 .coaches-container {
     min-height: 60vh;
-    padding: 3rem;
+    padding: 2rem 6rem;
     background: rgb(221,213,40);
     background: linear-gradient(90deg, rgba(221,213,40,1) 36%, rgba(242,236,7,1) 100%);
     /* background-color: rgb(44, 44, 44); */
 }
 
 .coaches {
-    display: flex;
+    display: grid;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 4rem;
 }
 
 .coaches-container h1 {
@@ -289,7 +316,7 @@ nav {
 }
 
 .coaches .coach-card {
-    width: 40%;
+    min-width: 40vw;
     min-height: 15rem;
     margin: 3rem;
     background-color: rgb(44, 44, 44);
@@ -361,6 +388,7 @@ nav {
 .testimonials-inner-container p {
     font-size: 2rem;
     color: rgb(44, 44, 44);
+    text-align: center;
 }
 
 .testimonials-inner-container .testimonial-card {
@@ -424,12 +452,8 @@ blockquote .fa{
 
 .contact-card {
     width: 40%;
-    min-height: 20rem;
+    min-height: 20vh;
     padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     background: rgb(221,213,40);
     background:  linear-gradient(90deg, rgba(221,213,40,1) 36%, rgba(242,236,7,1) 100%);
     margin: 3rem;
@@ -437,6 +461,14 @@ blockquote .fa{
     right: 32rem;
     z-index: 1;
     border: 10px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.name-container, .email-container, .message-container {
+    margin: 1rem 0rem;
 }
 
 .contact-info {
@@ -460,7 +492,7 @@ blockquote .fa{
 }
 
 label {
-    margin: 1rem 0rem;
+    /* margin: 1rem 0rem; */
     font-size: 1rem;
     color: rgb(44, 44, 44);
     font-weight: bold;
@@ -470,7 +502,7 @@ input, textarea {
     width: 20rem;
     height: 1rem;
     padding: 1rem;
-    margin: 2rem;
+    /* margin: 2rem; */
     border: none;
     background: rgba(255, 255, 255, 0.755);
 }
@@ -480,6 +512,7 @@ textarea {
 
 .btn-container button {
     border: 3px solid rgb(44, 44, 44);
+    border-radius: 100px;
     margin: 1rem 0rem;
     text-transform: uppercase;
 }
@@ -510,6 +543,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
@@ -544,6 +578,7 @@ textarea {
 .special-btn {
     background: transparent;
     border: 3px solid rgb(255, 255, 255);
+    border-radius: 100px;
     color: rgb(44, 44, 44);
 }
 
@@ -556,6 +591,7 @@ textarea {
 
 .pricing-btn {
     background: transparent;
+    border-radius: 100px;
     border: 3px solid rgb(221,213,40);
     color: rgb(255, 255, 255);
 }
@@ -587,7 +623,7 @@ textarea {
     position: absolute;
     height: 6rem;
     background-color: #FFFFFF;
-    width: 70%;
+    width: 70vw;
     z-index: 3;
 }
 
@@ -626,6 +662,11 @@ textarea {
     align-items: center;
 }
 
+.footer div {
+    width: 40vw;
+    min-height: 20vh;
+}
+
 .footer-list {
     width: 100%;
     display: flex;
@@ -636,6 +677,7 @@ textarea {
 .footer-list li {
     color: rgba(204, 204, 204, 0.555);
     margin: 0.5rem;
+    text-align: center;
 }
 
 .footer-list li a {
@@ -653,7 +695,7 @@ textarea {
     text-align: right;
 }
 
-.newsletter input {
+.newsletter div input {
     width: 20rem;
     height: 2rem;
     padding: 1rem;
@@ -662,17 +704,21 @@ textarea {
     color: rgb(255, 255, 255);
 }
 
-.newsletter input::placeholder {
+.newsletter div input::placeholder {
     color: rgb(255, 255, 255)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
 }
 
-.newsletter button {
+.newsletter div button {
+    width: 4rem;
+    height: 2rem;
     background: transparent;
-    border: 3px solid rgb(221,213,40);
+    border: 2px solid rgb(221,213,40);
+    border-radius: 100px;
     color: rgb(255, 255, 255);
-    padding: 0.5rem 1rem;
+    padding: 0rem 1rem;
+    text-align: center;
 } 
-.newsletter button:hover {
+.newsletter div button:hover {
     color: rgb(44, 44, 44);
     border-color: rgb(255, 255, 255);
     background: rgb(255, 255, 255);
@@ -690,7 +736,16 @@ textarea {
 }
 
 
-/* For Mobile or Tablet Section */
 
+@media screen and (max-width: 1280px) {
+    .navbar {
+        padding: 2rem;
+        display: flex;
+    }
 
-/* End of Responsive Section */
+    nav {
+        width: 45%;
+    }
+    
+}
+

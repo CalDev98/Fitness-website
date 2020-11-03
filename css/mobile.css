@@ -1,0 +1,181 @@
+
+/* For Mobile or Tablet Section */
+@media (min-width: 250px) and (max-width: 600px) {
+    html {
+        font-size: 80%;
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-container {
+        width: 10.3rem;
+        margin: 0rem 3rem;
+    }
+
+    .burger {
+        width: 4rem;
+        height: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+	 	right: 5%;
+	 	top: 50%;
+	 	transform: translate(-10%, -50%);
+	 	z-index: 7;
+    }
+
+    .line {
+        width: 3rem;
+        height: 3px;
+        margin: 4px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        background: linear-gradient(90deg, rgba(221,213,40,1) 36%, rgba(242,236,7,1) 100%);
+	 	height: 50vh;
+	 	width: 100vw;
+        flex-direction: column;
+        transform: translate(-230px, 70px);
+	 	transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+        z-index: 5;
+        pointer-events: all;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li a {
+        font-size: 20px;
+    }
+
+    .nav-links li:nth-child(1) {
+        opacity: 1;
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        opacity: 1;
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        opacity: 1;
+        transition: all 0.5s ease 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        opacity: 1;
+        transition: all 0.5s ease 0.8s;
+    }
+
+    /* hero section */
+
+    .hero{
+        height: 50vh;
+    }
+
+    #carouselExampleIndicators{
+        height: 70vh;
+    }
+
+    .hero-text {
+        width: 80%;
+        left: 4rem;
+        top: 4rem;
+    }
+
+    /* .our-programs .cards-container{
+        grid-auto-flow: column;
+    } */
+
+    .our-programs .cards-container .card{
+        margin: 1rem;
+    }
+
+    .coaches {
+        flex-wrap: wrap;
+    }
+
+
+    /* Testimonials */
+    .testimonial-card{
+        flex-wrap: wrap;
+    }
+
+    .testimonials-profiles {
+        width: 70vw;
+        margin: 5rem 0rem;
+    }
+
+    .contact-container {
+        height: 80vh;
+        background-color: rgb(44, 44, 44);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0rem;
+    }
+
+    .contact-card-container {
+        width: 100vw;
+    }
+
+    .contact-card {
+        width: 90vw;
+        min-height: 20rem;
+        position: relative;
+        margin: 1.5rem;
+        right: 0rem;
+    }
+    
+    .contact-info {
+        display: none;
+    }
+
+    .share-btn {
+        width: 100vw;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer div {
+        margin: 1rem;
+    }
+
+    .newsletter-form-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .newsletter-form-container button {
+        margin-left: 1rem;
+    }
+    
+    
+}
